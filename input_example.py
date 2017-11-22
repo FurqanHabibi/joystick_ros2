@@ -17,6 +17,7 @@ def main():
         if events:
             for event in events:
                 print(event.ev_type, event.code, event.state)
+                print('-' + event.device.name + '-')
 
 
 if __name__ == "__main__":
