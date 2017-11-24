@@ -197,7 +197,7 @@ class JoystickRos2(rclpy.Node):
         self.joy.header.stamp.nanosec = int(current_time[0] * 1000000000) & 0xffffffff
         self.publisher_.publish(self.joy)
         self.last_publish_time = time.time()
-        print(self.joy)
+        #print(self.joy)
 
     def normalize_key_value(self, key_value_min, key_value_max, key_value):
         normalized = ((key_value - key_value_min) / (key_value_max - key_value_min) * (-2)) + 1
