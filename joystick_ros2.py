@@ -12,15 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import rclpy
-
-from sensor_msgs.msg import Joy
-from std_msgs.msg import Header
+import platform
 import time
 from math import modf
 
+import rclpy
+from rclpy.node import Node
+
+from sensor_msgs.msg import Joy
+from std_msgs.msg import Header
 from inputs import devices, UnpluggedError
-import platform
 
 # Microsoft X-Box 360 pad
 XINPUT_CODE_MAP = {
@@ -165,7 +166,7 @@ JOYSTICK_CODE_VALUE_MAP = {
     'Microsoft X-Box One pad': (XONE_CODE_MAP, XONE_VALUE_MAP)
 }
 
-class JoystickRos2(rclpy.Node):
+class JoystickRos2(Node):
 
     def __init__(self):
         super().__init__('joystick_ros2')
