@@ -20,7 +20,7 @@ $ call install/local_setup.bat
 - Plug in the joystick
 - Run the node with below command
     ```
-    ros2 run joystick_ros2 joystick_ros2
+    $ ros2 run joystick_ros2 joystick_ros2
     ``` 
 
 ## Supported joysticks
@@ -34,7 +34,7 @@ Linux, Mac OSX:
     - Logitech F710
     - Xbox One Controller
 
-## ROS Node
+## ROS2 Node
 ### Published Topics
 - joy ([sensor_msgs/Joy](https://github.com/ros2/common_interfaces/blob/master/sensor_msgs/msg/Joy.msg))
 
